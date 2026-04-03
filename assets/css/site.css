@@ -295,6 +295,45 @@ a {
   color: var(--muted);
 }
 
+.kicker {
+  margin: 0 0 10px;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.formula-list,
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.faq-item {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(23, 33, 43, 0.1);
+}
+
+.faq-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .footer {
   padding: 28px 0 40px;
 }

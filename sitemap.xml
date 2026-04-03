@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/pixels-per-unit-calculator.html</loc></url>
-  <url><loc>https://example.com/frame-time-calculator.html</loc></url>
-  <url><loc>https://example.com/sprite-sheet-frame-count-calculator.html</loc></url>
-  <url><loc>https://example.com/atlas-texture-memory-estimator.html</loc></url>
-  <url><loc>https://example.com/tilemap-dimension-calculator.html</loc></url>
+  <url><loc>https://hamisht92.github.io/game-dev-utility-site/</loc></url>
+  <url><loc>https://hamisht92.github.io/game-dev-utility-site/pixels-per-unit-calculator.html</loc></url>
+  <url><loc>https://hamisht92.github.io/game-dev-utility-site/frame-time-calculator.html</loc></url>
+  <url><loc>https://hamisht92.github.io/game-dev-utility-site/sprite-sheet-frame-count-calculator.html</loc></url>
+  <url><loc>https://hamisht92.github.io/game-dev-utility-site/atlas-texture-memory-estimator.html</loc></url>
+  <url><loc>https://hamisht92.github.io/game-dev-utility-site/tilemap-dimension-calculator.html</loc></url>
 </urlset>
