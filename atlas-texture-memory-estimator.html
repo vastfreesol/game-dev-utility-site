@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Texture Memory Estimator</title>
+  <meta name="description" content="Estimate the approximate memory footprint of a texture atlas from width, height, and bytes per pixel." />
+  <link rel="canonical" href="https://example.com/atlas-texture-memory-estimator.html" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="topbar__brand" href="index.html">
+        <span class="topbar__badge"></span>
+        <span>Game Dev Utility Site</span>
+      </a>
+    </header>
+    <section class="hero hero--compact">
+      <p class="hero__eyebrow">Texture budgeting</p>
+      <h1 class="hero__title">Atlas Texture Memory Estimator</h1>
+      <p class="hero__copy">Estimate atlas memory cost early so you can compare tradeoffs between resolution, compression, and batching.</p>
+    </section>
+    <section class="section split">
+      <form id="calculator-form" class="panel calculator">
+        <p class="prose">Use this calculator to understand the rough uncompressed memory footprint of a texture atlas.</p>
+        <div class="field-grid">
+<div class="field">
+  <label for="width">Atlas Width (pixels)</label>
+  <input id="width" name="width" type="number" step="1" min="1" value="2048" />
+</div>
+<div class="field">
+  <label for="height">Atlas Height (pixels)</label>
+  <input id="height" name="height" type="number" step="1" min="1" value="2048" />
+</div>
+<div class="field">
+  <label for="bytesPerPixel">Bytes Per Pixel</label>
+  <input id="bytesPerPixel" name="bytesPerPixel" type="number" step="0.25" min="0.25" value="4" />
+</div>
+        </div>
+        <div class="button-row">
+          <button class="button" type="submit">Calculate</button>
+          <button class="button button--secondary" type="reset">Reset</button>
+        </div>
+        <div class="result" data-result>
+          <span class="result__label" data-result-label>Approximate memory usage</span>
+          <span class="result__value" data-result-value>Loading...</span>
+          <p class="result__explanation" data-result-explanation></p>
+        </div>
+      </form>
+      <aside class="panel panel--padded">
+        <h2 class="section-title">Why this page matters</h2>
+        <p class="prose">Primary search intent: <strong>atlas texture memory estimator</strong>.</p>
+        <p class="prose">This is most useful during art pipeline planning or when comparing whether multiple smaller atlases are better than one larger atlas.</p>
+        <div class="monetization-slot">
+          <strong>monetization-mid</strong>
+          <p class="prose">Place contextual tool recommendations, affiliate offers, or sponsor blocks here.</p>
+        </div>
+      </aside>
+    </section>
+    <section class="section split">
+      <article class="panel panel--padded">
+        <h2 class="section-title">When this helps</h2>
+        <p class="prose">This is most useful during art pipeline planning or when comparing whether multiple smaller atlases are better than one larger atlas.</p>
+      </article>
+      <article class="panel panel--padded">
+        <h2 class="section-title">Related tools</h2>
+        <ul class="list">
+<li><a href="pixels-per-unit-calculator.html">Pixels Per Unit Calculator</a></li>
+<li><a href="frame-time-calculator.html">Frame Time Calculator</a></li>
+<li><a href="sprite-sheet-frame-count-calculator.html">Sprite Sheet Frame Count Calculator</a></li>
+        </ul>
+      </article>
+    </section>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/atlas-texture-memory.js"></script>
+    <footer class="footer">
+      <p>Built as a static site for lightweight deployment on GitHub Pages, Cloudflare Pages, or Netlify.</p>
+      <div class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
