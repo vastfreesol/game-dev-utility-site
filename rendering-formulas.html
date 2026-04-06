@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rendering formulas | GameDev Utility</title>
+  <meta name="description" content="Useful formulas for frame budget planning, view setup, and visual content sizing." />
+  <meta name="keywords" content="Rendering formulas, game dev formulas, formula registry" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://vastfreesol.github.io/game-dev-utility-site/rendering-formulas.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rendering formulas | GameDev Utility" />
+  <meta property="og:description" content="Useful formulas for frame budget planning, view setup, and visual content sizing." />
+  <meta property="og:url" content="https://vastfreesol.github.io/game-dev-utility-site/rendering-formulas.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://vastfreesol.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rendering formulas | GameDev Utility" />
+  <meta name="twitter:description" content="Useful formulas for frame budget planning, view setup, and visual content sizing." />
+  <meta name="twitter:image" content="https://vastfreesol.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775510627" />
+  <script type="application/ld+json">{"@context":"https://schema.org","url":"https://vastfreesol.github.io/game-dev-utility-site/rendering-formulas.html","name":"Rendering formulas","description":"Useful formulas for frame budget planning, view setup, and visual content sizing.","@type":"CollectionPage"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink" href="calculators.html">Calculators</a>
+                <a class="site-nav__sublink site-nav__sublink--active" href="formula-registry.html">Formula Registry</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">Rendering formulas</p>
+          <h1 class="hero__title hero__title--page">Rendering formulas</h1>
+          <p class="hero__copy">Useful formulas for frame budget planning, view setup, and visual content sizing.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Why these matter</p>
+            <h2 class="section-heading__title">What this formula type is for</h2>
+            <p class="section-heading__copy">Use these when you are budgeting frame time, converting camera FOV, or estimating visual asset costs.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Formula count</p>
+            <h2 class="section-heading__title">5 formulas in this type</h2>
+            <p class="section-heading__copy">Use this page as the full reference for this subtype, then jump into any interactive formula page where it exists.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="formula-registry.html">Back to Formula Registry</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="tool-grid tool-grid--tight">
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square">
+  <p class="eyebrow">Frame time from FPS</p>
+  <div class="formula-card__expression">FrameTimeMs = 1000 / FPS</div>
+  <p class="formula-card__simple"><strong>Purpose:</strong> Turns a framerate target into milliseconds per frame.</p>
+  <p class="formula-card__variables"><strong>Variables:</strong> FPS is your target frames per second.</p>
+  <p class="formula-card__constants"><strong>Constants:</strong> 1000 is the number of milliseconds in one second.</p>
+  <a class="button button--ghost" href="frame-time-from-fps.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square">
+  <p class="eyebrow">Horizontal FOV from vertical FOV</p>
+  <div class="formula-card__expression">HFOV = 2 * atan(tan(VFOV / 2) * AspectRatio)</div>
+  <p class="formula-card__simple"><strong>Purpose:</strong> Converts a vertical camera FOV into a horizontal FOV.</p>
+  <p class="formula-card__variables"><strong>Variables:</strong> VFOV is vertical field of view. AspectRatio is width divided by height.</p>
+  <p class="formula-card__constants"><strong>Constants:</strong> 2 converts the half-angle math back into a full angle.</p>
+  <a class="button button--ghost" href="horizontal-fov-from-vertical-fov.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square">
+  <p class="eyebrow">Aspect ratio</p>
+  <div class="formula-card__expression">AspectRatio = Width / Height</div>
+  <p class="formula-card__simple"><strong>Purpose:</strong> Describes the shape of the screen or render target.</p>
+  <p class="formula-card__variables"><strong>Variables:</strong> Width and Height are the screen or texture dimensions.</p>
+  <p class="formula-card__constants"><strong>Constants:</strong> None</p>
+  <a class="button button--ghost" href="aspect-ratio.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square">
+  <p class="eyebrow">Texture memory</p>
+  <div class="formula-card__expression">MemoryBytes = Width * Height * BytesPerPixel</div>
+  <p class="formula-card__simple"><strong>Purpose:</strong> Gives a rough uncompressed memory cost for a texture.</p>
+  <p class="formula-card__variables"><strong>Variables:</strong> Width and Height are texture dimensions. BytesPerPixel depends on the format.</p>
+  <p class="formula-card__constants"><strong>Constants:</strong> None</p>
+  <a class="button button--ghost" href="texture-memory.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square">
+  <p class="eyebrow">Pixel density</p>
+  <div class="formula-card__expression">PixelsPerMeter = ResolutionPixels / WorldMeters</div>
+  <p class="formula-card__simple"><strong>Purpose:</strong> Helps compare how much visual detail is spread across a world-space size.</p>
+  <p class="formula-card__variables"><strong>Variables:</strong> ResolutionPixels is the texture or sprite size. WorldMeters is the in-game size.</p>
+  <p class="formula-card__constants"><strong>Constants:</strong> None</p>
+  <a class="button button--ghost" href="pixel-density.html">Open formula</a>
+</article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused calculators and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="formula-registry.html">Formula Registry</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775510627"></script>
+
+</body>
+</html>

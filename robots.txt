@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hamisht92.github.io/game-dev-utility-site/sitemap.xml
+Sitemap: https://vastfreesol.github.io/game-dev-utility-site/sitemap.xml

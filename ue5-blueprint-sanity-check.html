@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UE5 Blueprint Sanity Check | GameDev Utility</title>
+  <meta name="description" content="Check whether a Blueprint type is a sensible home for a node, or look up a UE5 Blueprint node and see which Blueprint types commonly use it." />
+  <meta name="keywords" content="UE5 Blueprint Sanity Check, ue5 blueprint sanity check, unreal engine blueprint guide, ue5 blueprint compatibility" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://vastfreesol.github.io/game-dev-utility-site/ue5-blueprint-sanity-check.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="UE5 Blueprint Sanity Check | GameDev Utility" />
+  <meta property="og:description" content="Check whether a Blueprint type is a sensible home for a node, or look up a UE5 Blueprint node and see which Blueprint types commonly use it." />
+  <meta property="og:url" content="https://vastfreesol.github.io/game-dev-utility-site/ue5-blueprint-sanity-check.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://vastfreesol.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UE5 Blueprint Sanity Check | GameDev Utility" />
+  <meta name="twitter:description" content="Check whether a Blueprint type is a sensible home for a node, or look up a UE5 Blueprint node and see which Blueprint types commonly use it." />
+  <meta name="twitter:image" content="https://vastfreesol.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775510627" />
+  <script type="application/ld+json">[{"name":"UE5 Blueprint Sanity Check","keywords":"UE5 Blueprint Sanity Check, ue5 blueprint sanity check, unreal engine blueprint guide, ue5 blueprint compatibility","@context":"https://schema.org","description":"Check whether a Blueprint type is a sensible home for a node, or look up a UE5 Blueprint node and see which Blueprint types commonly use it.","@type":"WebPage","url":"https://vastfreesol.github.io/game-dev-utility-site/ue5-blueprint-sanity-check.html"},{"@context":"https://schema.org","mainEntity":[{"acceptedAnswer":{"text":"This is useful when a node appears in the context menu but you are not sure whether it truly belongs in an Actor, Component, Widget, Animation Blueprint, or utility Blueprint.","@type":"Answer"},"name":"What does this tool help with?","@type":"Question"},{"acceptedAnswer":{"text":"No. The page surfaces official target and type information from Epic docs, then labels any practical compatibility recommendations as inference.","@type":"Answer"},"name":"Is every result a direct Epic rule?","@type":"Question"}],"@type":"FAQPage"}]</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink" href="calculators.html">Calculators</a>
+                <a class="site-nav__sublink" href="formula-registry.html">Formula Registry</a>
+                <a class="site-nav__sublink site-nav__sublink--active" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">Unreal Engine workflow</p>
+          <h1 class="hero__title hero__title--page">UE5 Blueprint Sanity Check</h1>
+          <p class="hero__copy">Start from a Blueprint type like Actor or Widget Blueprint, or start from a node like Delay, and get a practical compatibility check backed by Epic docs.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="content-grid content-grid--wide">
+          <article class="surface surface--soft">
+            <p class="eyebrow">What this page does</p>
+            <h2 class="section-heading__title">Practical compatibility checks</h2>
+            <p class="section-heading__copy">Use this page when you are deciding where Blueprint logic belongs. It combines official Epic documentation for Blueprint types and Blueprint API targets with clearly labeled practical inference.</p>
+            <ul class="detail-list">
+              <li>Start from a Blueprint type like Actor, Character, Widget Blueprint, or Blueprint Function Library.</li>
+              <li>Or start from a node like Delay, Create Widget, Get Owner, or Add Movement Input.</li>
+              <li>See what is direct, what is global utility, and what only makes sense through a reference or world context.</li>
+            </ul>
+          </article>
+          <aside class="surface surface--soft">
+            <p class="eyebrow">Why it helps</p>
+            <h2 class="section-heading__title">Docs plus inference</h2>
+            <p class="section-heading__copy">This is useful when a node appears in the context menu but you are not sure whether it truly belongs in an Actor, Component, Widget, Animation Blueprint, or utility Blueprint.</p>
+          </aside>
+        </div>
+      </section>
+      <section class="section">
+<div id="blueprint-sanity-check-app" class="bp-sanity-app">
+  <section class="bp-sanity-shell surface">
+    <div class="bp-sanity-shell__header">
+      <div>
+        <p class="eyebrow">UE5 Blueprint sanity checker</p>
+        <h2 class="section-heading__title">Check a Blueprint type or a node</h2>
+      </div>
+      <p class="section-heading__copy">This page mixes official Unreal docs with clearly labeled compatibility inference so you can sanity-check where a node belongs before wiring the graph.</p>
+    </div>
+    <div class="bp-sanity-tabs" role="tablist" aria-label="Blueprint sanity modes">
+      <button class="bp-sanity-tab bp-sanity-tab--active" type="button" data-mode-button="type" aria-pressed="true">Blueprint Type</button>
+      <button class="bp-sanity-tab" type="button" data-mode-button="function" aria-pressed="false">Function or Node</button>
+    </div>
+    <div class="bp-sanity-controls">
+      <div class="field">
+        <label for="bp-mode-query">Search</label>
+        <input id="bp-mode-query" name="bp-mode-query" type="search" placeholder="Try Actor, Delay, Create Widget, Character..." data-query-input />
+      </div>
+      <div class="field" data-type-select-wrap>
+        <label for="bp-type-select">Blueprint Type</label>
+        <select id="bp-type-select" name="bp-type-select" data-type-select></select>
+      </div>
+      <div class="field" data-function-select-wrap hidden>
+        <label for="bp-function-select">Function or Node</label>
+        <select id="bp-function-select" name="bp-function-select" data-function-select></select>
+      </div>
+    </div>
+    <div class="bp-sanity-summary surface surface--soft" data-summary-card></div>
+    <div class="bp-sanity-results">
+      <article class="surface surface--soft" data-primary-panel></article>
+      <article class="surface surface--soft" data-secondary-panel></article>
+    </div>
+    <article class="surface surface--soft bp-sanity-method">
+      <p class="eyebrow">How to read this</p>
+      <ul class="detail-list">
+        <li><strong>Official target</strong> means Epic documents the owning class or library for the node.</li>
+        <li><strong>Directly on self</strong> means the Blueprint type naturally owns that target or inherits it.</li>
+        <li><strong>Via references</strong> means you can still use the node when you hold the right object reference, even if the Blueprint itself is not the target.</li>
+        <li><strong>Inference</strong> is where this page connects the docs into a practical "where should I put this?" recommendation.</li>
+      </ul>
+    </article>
+  </section>
+</div>
+      </section>
+      <section class="section">
+        <div class="content-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Practical framing</p>
+            <h2 class="section-heading__title">How to think about node availability</h2>
+            <p class="section-heading__copy">In Unreal, many Blueprint nodes are tied to a target class or a static library instead of a neat "this Blueprint can use it" checkbox. That is why a sanity check is helpful: it turns target metadata, parent classes, and library ownership into a faster recommendation for where the graph probably belongs.</p>
+            <p class="section-heading__copy">The result is intentionally practical rather than absolute. A node can often be called from many places once you hold the right reference, but the cleanest home for it is usually narrower.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Related tools</p>
+            <h2 class="section-heading__title">Keep moving</h2>
+            <ul class="detail-list detail-list--links">
+<li><a href="game-dev-formula-reference.html">Game Dev Formula Reference</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section-heading__title">Common questions</h2>
+            <div class="faq-list">
+<article class="faq-item">
+  <h3>What does this tool help with?</h3>
+  <p>This is useful when a node appears in the context menu but you are not sure whether it truly belongs in an Actor, Component, Widget, Animation Blueprint, or utility Blueprint.</p>
+</article>
+<article class="faq-item">
+  <h3>Is every result a direct Epic rule?</h3>
+  <p>No. The page surfaces official target and type information from Epic docs, then labels any practical compatibility recommendations as inference.</p>
+</article>
+            </div>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Sources</p>
+            <h2 class="section-heading__title">Docs foundation</h2>
+            <p class="section-heading__copy">This page is based on Epic documentation for Blueprint types, Blueprint function libraries, Actor and Component behavior, widgets, animation Blueprints, and specific Blueprint API nodes.</p>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused calculators and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="formula-registry.html">Formula Registry</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775510627"></script>
+  <script src="assets/js/ue5-blueprint-sanity-check.js?v=1775510627"></script>
+</body>
+</html>
