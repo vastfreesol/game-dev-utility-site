@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Normalize Vector Formula | GameDev Utility</title>
+  <meta name="description" content="Normalize 2D and 3D vectors, compare magnitudes before and after normalization, and see how the components change." />
+  <meta name="keywords" content="normalize vector, 2d normalize vector, 3d normalize vector, unit vector, game dev math" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/normalize-vector-formula.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Normalize Vector Formula | GameDev Utility" />
+  <meta property="og:description" content="Normalize 2D and 3D vectors, compare magnitudes before and after normalization, and see how the components change." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/normalize-vector-formula.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Normalize Vector Formula | GameDev Utility" />
+  <meta name="twitter:description" content="Normalize 2D and 3D vectors, compare magnitudes before and after normalization, and see how the components change." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"name":"Normalize Vector Formula","keywords":"normalize vector, 2d normalize vector, 3d normalize vector, unit vector, game dev math","@context":"https://schema.org","description":"Normalize 2D and 3D vectors, compare magnitudes before and after normalization, and see how the components change.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/normalize-vector-formula.html"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">Core utility formula</p>
+          <h1 class="hero__title hero__title--page">Normalize a vector for clean direction</h1>
+          <p class="hero__copy">Use normalize when you need a clean direction vector before applying speed, force, aim logic, or steering in 2D or 3D.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft formula-intro-card">
+            <p class="eyebrow">At a glance</p>
+            <div class="formula-card__expression">Normalized = Vector / |Vector|</div>
+            <p class="section-heading__copy">Normalization keeps the direction of a vector while shrinking or expanding its length to exactly 1. This makes it one of the most common math helpers in movement, aiming, and gameplay code.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="utilities.html">Back to Utilities</a>
+            </div>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">What it changes</p>
+            <h2 class="section-heading__title">Direction stays the same, magnitude becomes 1</h2>
+            <p class="section-heading__copy">Normalization is about preserving heading while standardizing length. That makes it ideal any time you want direction and speed to be handled separately in code.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Common game-dev uses</p>
+              <ul class="detail-list">
+                <li>Prevent diagonal movement from being faster than straight movement.</li>
+                <li>Get a clean aim vector before multiplying by projectile speed.</li>
+                <li>Normalize steering, camera, and navigation directions before applying acceleration.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface formula-lab formula-lab--page" data-formula-card="normalize-vector-2d">
+            <p class="eyebrow">2D vector</p>
+            <h2 class="section-heading__title">Normalize a 2D vector</h2>
+            <p class="section-heading__copy">Useful for top-down movement, aiming, direction to target, and planar steering.</p>
+            <div class="field-grid field-grid--tight">
+              <div class="field">
+                <label for="normalize-2d-x">X</label>
+                <input id="normalize-2d-x" name="normalize-2d-x" type="number" step="0.01" value="3" data-formula-input="x" />
+              </div>
+              <div class="field">
+                <label for="normalize-2d-y">Y</label>
+                <input id="normalize-2d-y" name="normalize-2d-y" type="number" step="0.01" value="4" data-formula-input="y" />
+              </div>
+            </div>
+            <div class="formula-visual__stats">
+              <div class="surface surface--soft formula-stat">
+                <span class="formula-stat__label">Original magnitude</span>
+                <span class="formula-stat__value" data-normalize-2d-magnitude>0</span>
+              </div>
+              <div class="surface surface--soft formula-stat">
+                <span class="formula-stat__label">Normalized</span>
+                <span class="formula-stat__value" data-normalize-2d-vector>0, 0</span>
+              </div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">2D normalized vector</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+          <article class="surface formula-lab formula-lab--page" data-formula-card="normalize-vector-3d">
+            <p class="eyebrow">3D vector</p>
+            <h2 class="section-heading__title">Normalize a 3D vector</h2>
+            <p class="section-heading__copy">Useful for character controllers, projectile direction, camera movement, normals, and 3D steering.</p>
+            <div class="field-grid field-grid--tight">
+              <div class="field">
+                <label for="normalize-3d-x">X</label>
+                <input id="normalize-3d-x" name="normalize-3d-x" type="number" step="0.01" value="3" data-formula-input="x" />
+              </div>
+              <div class="field">
+                <label for="normalize-3d-y">Y</label>
+                <input id="normalize-3d-y" name="normalize-3d-y" type="number" step="0.01" value="4" data-formula-input="y" />
+              </div>
+              <div class="field">
+                <label for="normalize-3d-z">Z</label>
+                <input id="normalize-3d-z" name="normalize-3d-z" type="number" step="0.01" value="12" data-formula-input="z" />
+              </div>
+            </div>
+            <div class="formula-visual__stats">
+              <div class="surface surface--soft formula-stat">
+                <span class="formula-stat__label">Original magnitude</span>
+                <span class="formula-stat__value" data-normalize-3d-magnitude>0</span>
+              </div>
+              <div class="surface surface--soft formula-stat">
+                <span class="formula-stat__label">Normalized</span>
+                <span class="formula-stat__value" data-normalize-3d-vector>0, 0, 0</span>
+              </div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">3D normalized vector</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Simple explanation</p>
+            <h2 class="section-heading__title">What normalization is actually doing</h2>
+            <p class="section-heading__copy">Take the vector, measure its length, then divide each component by that length. The result still points the same way, but now its magnitude is exactly 1.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Code example</p>
+              <pre class="formula-code__block"><code>Vector3 normalized = vector.normalized;</code></pre>
+            </div>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Key warning</p>
+            <h2 class="section-heading__title">A zero vector cannot be normalized safely</h2>
+            <p class="section-heading__copy">If every component is zero, the vector has no direction and its magnitude is zero. In practice, that means you need a guard before dividing by the vector length, or you should return a zero vector instead.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Pseudocode</p>
+              <pre class="formula-code__block"><code>length = sqrt(x*x + y*y + z*z)
+if length == 0
+    result = zero vector
+else
+    result = vector / length</code></pre>
+            </div>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>

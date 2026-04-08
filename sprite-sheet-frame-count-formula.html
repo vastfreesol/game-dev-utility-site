@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sprite sheet frame count | GameDev Utility</title>
+  <meta name="description" content="Calculate how many frames fit in a sprite sheet, inspect rows and columns, and preview the packing layout." />
+  <meta name="keywords" content="sprite sheet frame count, animation frame packing, sprite sheet utility, 2d animation layout" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/sprite-sheet-frame-count-formula.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Sprite sheet frame count | GameDev Utility" />
+  <meta property="og:description" content="Calculate how many frames fit in a sprite sheet, inspect rows and columns, and preview the packing layout." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/sprite-sheet-frame-count-formula.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sprite sheet frame count | GameDev Utility" />
+  <meta name="twitter:description" content="Calculate how many frames fit in a sprite sheet, inspect rows and columns, and preview the packing layout." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"name":"Sprite sheet frame count","keywords":"sprite sheet frame count, animation frame packing, sprite sheet utility, 2d animation layout","@context":"https://schema.org","description":"Calculate how many frames fit in a sprite sheet, inspect rows and columns, and preview the packing layout.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/sprite-sheet-frame-count-formula.html"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">2D formulas</p>
+          <h1 class="hero__title hero__title--page">Sprite sheet frame count</h1>
+          <p class="hero__copy">Use this when you need to know how many animation frames fit into a sheet before export, packing, or atlas planning. It works out the grid, total frame count, and any leftover unused space.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid formula-page-grid--hero">
+          <article class="surface surface--soft formula-intro-card">
+            <p class="eyebrow">The formula</p>
+            <div class="formula-card__expression">Frames = floor(SheetWidth / FrameWidth) * floor(SheetHeight / FrameHeight)</div>
+            <h2 class="section-heading__title">Why you would use it</h2>
+            <p class="section-heading__copy">Sprite sheets are easy to underestimate. This page helps you check the actual frame capacity of a sheet and see how efficiently the frame size fills the available texture area.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="two-d-formulas.html">Back to 2D formulas</a>
+            </div>
+          </article>
+          <article class="surface formula-lab formula-lab--page formula-lab--visual" data-formula-card="sprite-sheet-frame-count-2d">
+            <div class="formula-visual">
+              <div class="formula-visual__header">
+                <div>
+                  <p class="eyebrow">Visualize it</p>
+                  <h2 class="section-heading__title">Preview the frame packing</h2>
+                </div>
+                <p class="section-heading__copy">Change the sheet and frame size to see how many columns and rows fit cleanly, plus any unused texture space that remains.</p>
+              </div>
+              <div class="formula-plot">
+                <svg class="formula-plot__svg" viewBox="0 0 320 240" role="img" aria-label="Sprite sheet frame packing preview">
+                  <rect x="0" y="0" width="320" height="240" fill="rgba(4, 10, 20, 0.4)"></rect>
+                  <g data-sheet-grid></g>
+                  <text x="160" y="220" text-anchor="middle" class="formula-plot__label formula-plot__label--muted" data-sheet-summary>0 cols x 0 rows</text>
+                </svg>
+              </div>
+              <div class="formula-visual__stats">
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Columns</span>
+                  <span class="formula-stat__value" data-sheet-columns>0</span>
+                </div>
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Rows</span>
+                  <span class="formula-stat__value" data-sheet-rows>0</span>
+                </div>
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Frames</span>
+                  <span class="formula-stat__value" data-sheet-frames>0</span>
+                </div>
+              </div>
+            </div>
+            <div class="field-grid field-grid--tight">
+              <div class="field">
+                <label for="sheet-width">Sheet width (pixels)</label>
+                <input id="sheet-width" name="sheet-width" type="number" step="1" min="1" value="1024" data-formula-input="sheet-width" />
+              </div>
+              <div class="field">
+                <label for="sheet-height">Sheet height (pixels)</label>
+                <input id="sheet-height" name="sheet-height" type="number" step="1" min="1" value="1024" data-formula-input="sheet-height" />
+              </div>
+              <div class="field">
+                <label for="frame-width">Frame width (pixels)</label>
+                <input id="frame-width" name="frame-width" type="number" step="1" min="1" value="128" data-formula-input="frame-width" />
+              </div>
+              <div class="field">
+                <label for="frame-height">Frame height (pixels)</label>
+                <input id="frame-height" name="frame-height" type="number" step="1" min="1" value="128" data-formula-input="frame-height" />
+              </div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">Frame count result</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">How to think about it</p>
+            <h2 class="section-heading__title">Packing depends on integer frame slots</h2>
+            <p class="section-heading__copy">A sprite sheet only fits whole frames. That is why this utility floors the row and column counts instead of rounding. Anything left over at the edges becomes unused space unless you change either the sheet size or the frame size.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Game-dev use cases</p>
+              <ul class="detail-list">
+                <li>Check whether an animation fits an export target before rendering.</li>
+                <li>Compare multiple frame sizes while packing sprite sheets.</li>
+                <li>Estimate wasted texture space in a proposed atlas layout.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Variable breakdown</p>
+            <h2 class="section-heading__title">What each piece is doing</h2>
+            <ul class="detail-list formula-meta__list">
+              <li><strong>SheetWidth, SheetHeight</strong>: the full texture size available for the animation sheet.</li>
+              <li><strong>FrameWidth, FrameHeight</strong>: the dimensions of one animation frame.</li>
+              <li><strong>floor(...)</strong>: keeps the row and column counts to whole frame slots only.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Common mistake</p>
+            <h2 class="section-heading__title">Remainder space does not count as a frame</h2>
+            <p class="section-heading__copy">A partial frame at the edge of the sheet is still unusable. If the sheet size is not evenly divisible by the frame size, the leftover strip becomes waste unless you resize the sheet or crop the frame dimensions.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Related formulas</p>
+            <h2 class="section-heading__title">Useful next steps from here</h2>
+            <ul class="detail-list detail-list--links">
+<li><a href="distance-between-two-2d-points.html">Distance between two 2D points</a></li>
+<li><a href="direction-vector-from-a-to-b.html">Direction vector from A to B</a></li>
+<li><a href="angle-to-target-in-2d.html">Angle to target in 2D</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>

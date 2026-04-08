@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2D formulas | GameDev Utility</title>
+  <meta name="description" content="Useful formulas for sprite work, 2D movement, tilemaps, and screen-space math." />
+  <meta name="keywords" content="2D formulas, game dev formulas, utilities" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/two-d-formulas.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="2D formulas | GameDev Utility" />
+  <meta property="og:description" content="Useful formulas for sprite work, 2D movement, tilemaps, and screen-space math." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/two-d-formulas.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2D formulas | GameDev Utility" />
+  <meta name="twitter:description" content="Useful formulas for sprite work, 2D movement, tilemaps, and screen-space math." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"@context":"https://schema.org","url":"https://hamisht92.github.io/game-dev-utility-site/two-d-formulas.html","name":"2D formulas","description":"Useful formulas for sprite work, 2D movement, tilemaps, and screen-space math.","@type":"CollectionPage"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">2D formulas</p>
+          <h1 class="hero__title hero__title--page">2D formulas</h1>
+          <p class="hero__copy">Useful formulas for sprite work, 2D movement, tilemaps, and screen-space math. Start from the problem you are solving, then jump into the formula that helps you reason through it fastest.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Start here</p>
+            <h2 class="section-heading__title">What this part of game math helps you solve</h2>
+            <p class="section-heading__copy">Use these when you are placing sprites, measuring 2D distance, working out direction, or converting art dimensions into game-ready values.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Lookup flow</p>
+            <h2 class="section-heading__title">Search by the thing you need to work out</h2>
+            <p class="section-heading__copy">Think in practical terms like distance, direction, angle, tilemap size, or sprite scale. Use the search below to narrow the wall, then open the formula page that matches your task.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="utilities.html">Back to Utilities</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="surface surface--soft formula-search-panel" data-formula-search-root>
+          <div class="formula-search-panel__header">
+            <div>
+              <p class="eyebrow">Find a formula</p>
+              <h2 class="section-heading__title">Search this category</h2>
+            </div>
+            <p class="section-heading__copy">Try terms like distance, angle, direction, scale, tilemap, or sprite.</p>
+          </div>
+          <div class="field formula-search-panel__field">
+            <label for="two-d-formulas-formula-search">Search formulas</label>
+            <input id="two-d-formulas-formula-search" type="search" placeholder="Search by problem, variable, or formula name" data-formula-search-input />
+          </div>
+          <p class="formula-search-panel__status" data-formula-search-status>6 formulas in this category.</p>
+          <div class="tool-grid tool-grid--tight formula-grid" data-formula-search-results>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square" data-formula-card-item data-formula-title="Distance between two 2D points" data-formula-category="two-d-formulas" data-formula-search="distance between two 2d points distance = sqrt((x2 - x1)^2 + (y2 - y1)^2) measures how far one point is from another in 2d space. x1, y1 and x2, y2 are the two points you are comparing. 2d formulas" data-card-link="distance-between-two-2d-points.html" tabindex="0" role="link">
+  <p class="eyebrow">Distance between two 2D points</p>
+  <p class="formula-card__simple">Measures how far one point is from another in 2D space.</p>
+  <a class="button button--ghost" href="distance-between-two-2d-points.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square" data-formula-card-item data-formula-title="Direction vector from A to B" data-formula-category="two-d-formulas" data-formula-search="direction vector from a to b direction = normalize(b - a) gives you a unit direction pointing from one point to another. a is the start point. b is the target point. 2d formulas" data-card-link="direction-vector-from-a-to-b.html" tabindex="0" role="link">
+  <p class="eyebrow">Direction vector from A to B</p>
+  <p class="formula-card__simple">Gives you a unit direction pointing from one point to another.</p>
+  <a class="button button--ghost" href="direction-vector-from-a-to-b.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square" data-formula-card-item data-formula-title="Angle to target in 2D" data-formula-category="two-d-formulas" data-formula-search="angle to target in 2d angle = atan2(y2 - y1, x2 - x1) finds the facing angle from one point to another. x1, y1 is the source. x2, y2 is the target. 2d formulas" data-card-link="angle-to-target-in-2d.html" tabindex="0" role="link">
+  <p class="eyebrow">Angle to target in 2D</p>
+  <p class="formula-card__simple">Finds the facing angle from one point to another.</p>
+  <a class="button button--ghost" href="angle-to-target-in-2d.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square" data-formula-card-item data-formula-title="Pixels per unit" data-formula-category="two-d-formulas" data-formula-search="pixels per unit ppu = spritepixels / worldunits converts sprite size into a clean world scale. spritepixels is the sprite size. worldunits is the in-game size you want. 2d formulas" data-card-link="pixels-per-unit-formula.html" tabindex="0" role="link">
+  <p class="eyebrow">Pixels per unit</p>
+  <p class="formula-card__simple">Converts sprite size into a clean world scale.</p>
+  <a class="button button--ghost" href="pixels-per-unit-formula.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square" data-formula-card-item data-formula-title="Tilemap world size" data-formula-category="two-d-formulas" data-formula-search="tilemap world size mapwidth = tilewidth * columns; mapheight = tileheight * rows works out the final size of a tilemap from tile size and grid count. tilewidth and tileheight are tile dimensions. columns and rows are tile counts. 2d formulas" data-card-link="tilemap-world-size.html" tabindex="0" role="link">
+  <p class="eyebrow">Tilemap world size</p>
+  <p class="formula-card__simple">Works out the final size of a tilemap from tile size and grid count.</p>
+  <a class="button button--ghost" href="tilemap-world-size.html">Open formula</a>
+</article>
+<article class="surface feature-card feature-card--stacked formula-card formula-card--square" data-formula-card-item data-formula-title="Sprite sheet frame count" data-formula-category="two-d-formulas" data-formula-search="sprite sheet frame count frames = floor(sheetwidth / framewidth) * floor(sheetheight / frameheight) shows how many frames fit in a sprite sheet. sheetwidth and sheetheight are the full sheet size. framewidth and frameheight are each frame size. 2d formulas" data-card-link="sprite-sheet-frame-count-formula.html" tabindex="0" role="link">
+  <p class="eyebrow">Sprite sheet frame count</p>
+  <p class="formula-card__simple">Shows how many frames fit in a sprite sheet.</p>
+  <a class="button button--ghost" href="sprite-sheet-frame-count-formula.html">Open formula</a>
+</article>
+          </div>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>

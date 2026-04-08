@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixels per unit | GameDev Utility</title>
+  <meta name="description" content="Convert sprite size into pixels per unit, compare world scale, and inspect how sprite pixels map into game units." />
+  <meta name="keywords" content="pixels per unit, sprite scale utility, 2d art scale, game dev ppu" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/pixels-per-unit-formula.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pixels per unit | GameDev Utility" />
+  <meta property="og:description" content="Convert sprite size into pixels per unit, compare world scale, and inspect how sprite pixels map into game units." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/pixels-per-unit-formula.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pixels per unit | GameDev Utility" />
+  <meta name="twitter:description" content="Convert sprite size into pixels per unit, compare world scale, and inspect how sprite pixels map into game units." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"name":"Pixels per unit","keywords":"pixels per unit, sprite scale utility, 2d art scale, game dev ppu","@context":"https://schema.org","description":"Convert sprite size into pixels per unit, compare world scale, and inspect how sprite pixels map into game units.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/pixels-per-unit-formula.html"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">2D formulas</p>
+          <h1 class="hero__title hero__title--page">Pixels per unit</h1>
+          <p class="hero__copy">Use this when you want to turn sprite dimensions into a clean in-engine scale. It helps you decide how many texture pixels should map to one world unit before you import or place 2D art.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid formula-page-grid--hero">
+          <article class="surface surface--soft formula-intro-card">
+            <p class="eyebrow">The formula</p>
+            <div class="formula-card__expression">PPU = SpritePixels / WorldUnits</div>
+            <h2 class="section-heading__title">Why you would use it</h2>
+            <p class="section-heading__copy">PPU is one of the quickest ways to keep sprites, props, and tiles consistent. Instead of eyeballing scale in engine, you can choose the world size you want and let the utility give you the matching import value.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="two-d-formulas.html">Back to 2D formulas</a>
+            </div>
+          </article>
+          <article class="surface formula-lab formula-lab--page formula-lab--visual" data-formula-card="ppu-2d">
+            <div class="formula-visual">
+              <div class="formula-visual__header">
+                <div>
+                  <p class="eyebrow">Visualize it</p>
+                  <h2 class="section-heading__title">Compare pixel size and world size</h2>
+                </div>
+                <p class="section-heading__copy">Change the sprite height in pixels and the world height you want it to occupy. The utility updates the suggested pixels-per-unit value and the amount of world space each pixel represents.</p>
+              </div>
+              <div class="formula-preview-stack">
+                <div class="surface surface--soft formula-preview-card">
+                  <span class="formula-stat__label">Sprite height</span>
+                  <span class="formula-preview-card__value" data-ppu-pixels-value>64 px</span>
+                  <p class="formula-preview-card__copy">Texture height measured in source pixels.</p>
+                </div>
+                <div class="surface surface--soft formula-preview-card">
+                  <span class="formula-stat__label">Desired world height</span>
+                  <span class="formula-preview-card__value" data-ppu-world-value>1 unit</span>
+                  <p class="formula-preview-card__copy">How tall the sprite should feel once it is in the game world.</p>
+                </div>
+              </div>
+              <div class="formula-visual__stats">
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">PPU</span>
+                  <span class="formula-stat__value" data-ppu-value>0</span>
+                </div>
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Units per pixel</span>
+                  <span class="formula-stat__value" data-ppu-units-per-pixel>0</span>
+                </div>
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">100 px example</span>
+                  <span class="formula-stat__value" data-ppu-sample-height>0</span>
+                </div>
+              </div>
+            </div>
+            <div class="field-grid field-grid--tight">
+              <div class="field">
+                <label for="ppu-sprite-pixels">Sprite size (pixels)</label>
+                <input id="ppu-sprite-pixels" name="ppu-sprite-pixels" type="number" step="1" min="1" value="64" data-formula-input="sprite-pixels" />
+              </div>
+              <div class="field">
+                <label for="ppu-world-units">Desired world size (units)</label>
+                <input id="ppu-world-units" name="ppu-world-units" type="number" step="0.01" min="0.01" value="1" data-formula-input="world-units" />
+              </div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">Pixels per unit</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">How to think about it</p>
+            <h2 class="section-heading__title">Choose world scale first, then derive import scale</h2>
+            <p class="section-heading__copy">It is usually easier to decide how big something should feel in the world before you worry about import settings. Once you know that target size, PPU becomes a clean conversion rather than a guess.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Game-dev use cases</p>
+              <ul class="detail-list">
+                <li>Set consistent Unity or Godot import scale across characters and props.</li>
+                <li>Align sprites with tile sizes and collision metrics.</li>
+                <li>Keep hand-made art and generated assets feeling like they belong together.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Variable breakdown</p>
+            <h2 class="section-heading__title">What each piece is doing</h2>
+            <ul class="detail-list formula-meta__list">
+              <li><strong>SpritePixels</strong>: the source size of the sprite, usually its height for character-like assets.</li>
+              <li><strong>WorldUnits</strong>: how much in-world space you want the sprite to occupy.</li>
+              <li><strong>PPU</strong>: how many pixels map to one game unit once imported.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Common mistake</p>
+            <h2 class="section-heading__title">Do not mix art scale and camera scale by accident</h2>
+            <p class="section-heading__copy">Changing PPU changes how art maps into world units, not how the camera sees the world. If something still feels wrong after setting PPU, the issue may be camera setup, zoom, or tile metrics instead.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Related formulas</p>
+            <h2 class="section-heading__title">Useful next steps from here</h2>
+            <ul class="detail-list detail-list--links">
+<li><a href="distance-between-two-2d-points.html">Distance between two 2D points</a></li>
+<li><a href="direction-vector-from-a-to-b.html">Direction vector from A to B</a></li>
+<li><a href="angle-to-target-in-2d.html">Angle to target in 2D</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>

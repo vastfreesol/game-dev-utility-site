@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angle to target in 2D | GameDev Utility</title>
+  <meta name="description" content="Find the facing angle from one 2D point to another, inspect the result in degrees and radians, and visualize it on a live plot." />
+  <meta name="keywords" content="angle to target 2d, atan2 game dev, facing angle 2d, look at target 2d" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/angle-to-target-in-2d.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Angle to target in 2D | GameDev Utility" />
+  <meta property="og:description" content="Find the facing angle from one 2D point to another, inspect the result in degrees and radians, and visualize it on a live plot." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/angle-to-target-in-2d.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Angle to target in 2D | GameDev Utility" />
+  <meta name="twitter:description" content="Find the facing angle from one 2D point to another, inspect the result in degrees and radians, and visualize it on a live plot." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"name":"Angle to target in 2D","keywords":"angle to target 2d, atan2 game dev, facing angle 2d, look at target 2d","@context":"https://schema.org","description":"Find the facing angle from one 2D point to another, inspect the result in degrees and radians, and visualize it on a live plot.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/angle-to-target-in-2d.html"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">2D formulas</p>
+          <h1 class="hero__title hero__title--page">Angle to target in 2D</h1>
+          <p class="hero__copy">Use this when something in your game needs to face or aim toward a target in 2D, whether that is a turret, a sprite, a projectile launcher, or a UI indicator.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid formula-page-grid--hero">
+          <article class="surface surface--soft formula-intro-card">
+            <p class="eyebrow">The formula</p>
+            <div class="formula-card__expression">Angle = atan2(y2 - y1, x2 - x1)</div>
+            <h2 class="section-heading__title">Why you would use it</h2>
+            <p class="section-heading__copy">Direction tells you where to go. Angle tells you how to rotate so something points at the target. This page helps you check the value in both degrees and radians and see the facing line update live.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="two-d-formulas.html">Back to 2D formulas</a>
+            </div>
+          </article>
+          <article class="surface formula-lab formula-lab--page formula-lab--visual" data-formula-card="angle-2d">
+            <div class="formula-visual">
+              <div class="formula-visual__header">
+                <div>
+                  <p class="eyebrow">Visualize it</p>
+                  <h2 class="section-heading__title">Plot origin and target, then inspect the angle</h2>
+                </div>
+                <p class="section-heading__copy">The arc is measured from the positive X axis. Drag either point or enter values directly to see how the facing angle changes.</p>
+              </div>
+              <div class="formula-plot">
+                <svg class="formula-plot__svg" viewBox="0 0 320 320" role="img" aria-label="2D angle to target plot">
+                  <defs>
+                    <pattern id="angle-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(150, 176, 218, 0.12)" stroke-width="1"></path>
+                    </pattern>
+                  </defs>
+                  <rect x="0" y="0" width="320" height="320" fill="url(#angle-grid)"></rect>
+                  <line x1="160" y1="0" x2="160" y2="320" class="formula-plot__axis"></line>
+                  <line x1="0" y1="160" x2="320" y2="160" class="formula-plot__axis"></line>
+                  <line x1="0" y1="0" x2="0" y2="0" class="formula-plot__reference" data-angle-reference></line>
+                  <path d="" class="formula-plot__arc" data-angle-arc></path>
+                  <line x1="0" y1="0" x2="0" y2="0" class="formula-plot__line" data-plot-line></line>
+                  <circle r="7" class="formula-plot__point formula-plot__point--a" data-point-a data-point-handle="a" tabindex="0" role="slider" aria-label="Source point"></circle>
+                  <circle r="7" class="formula-plot__point formula-plot__point--b" data-point-b data-point-handle="b" tabindex="0" role="slider" aria-label="Target point"></circle>
+                </svg>
+              </div>
+              <div class="formula-visual__stats">
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Degrees</span>
+                  <span class="formula-stat__value" data-angle-deg-value>0</span>
+                </div>
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Radians</span>
+                  <span class="formula-stat__value" data-angle-rad-value>0</span>
+                </div>
+                <div class="surface surface--soft formula-stat">
+                  <span class="formula-stat__label">Distance</span>
+                  <span class="formula-stat__value" data-angle-distance-value>0</span>
+                </div>
+              </div>
+            </div>
+            <div class="formula-point-groups">
+              <div class="surface surface--soft formula-point-group">
+                <p class="formula-point-group__title">Point A:</p>
+                <div class="formula-point-group__row">
+                  <div class="field formula-point-group__field">
+                    <label for="angle-2d-x1">X</label>
+                    <input id="angle-2d-x1" name="angle-2d-x1" type="number" step="0.1" value="0" data-formula-input="x1" />
+                  </div>
+                  <div class="field formula-point-group__field">
+                    <label for="angle-2d-y1">Y</label>
+                    <input id="angle-2d-y1" name="angle-2d-y1" type="number" step="0.1" value="0" data-formula-input="y1" />
+                  </div>
+                </div>
+              </div>
+              <div class="surface surface--soft formula-point-group">
+                <p class="formula-point-group__title">Point B:</p>
+                <div class="formula-point-group__row">
+                  <div class="field formula-point-group__field">
+                    <label for="angle-2d-x2">X</label>
+                    <input id="angle-2d-x2" name="angle-2d-x2" type="number" step="0.1" value="6" data-formula-input="x2" />
+                  </div>
+                  <div class="field formula-point-group__field">
+                    <label for="angle-2d-y2">Y</label>
+                    <input id="angle-2d-y2" name="angle-2d-y2" type="number" step="0.1" value="4" data-formula-input="y2" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">Angle result</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">How to think about it</p>
+            <h2 class="section-heading__title">Face the target from a known axis</h2>
+            <p class="section-heading__copy">Most 2D angle calculations use the positive X axis as the zero-degree reference, then measure how far the target sits around that circle. That is why tan2 is such a common tool for aiming and facing logic.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Game-dev use cases</p>
+              <ul class="detail-list">
+                <li>Rotate a turret or gun sprite toward the cursor.</li>
+                <li>Turn an enemy so it faces the player.</li>
+                <li>Drive arrow indicators and direction markers.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Variable breakdown</p>
+            <h2 class="section-heading__title">What each piece is doing</h2>
+            <ul class="detail-list formula-meta__list">
+              <li><strong>x2 - x1</strong>: the horizontal offset to the target.</li>
+              <li><strong>y2 - y1</strong>: the vertical offset to the target.</li>
+              <li><strong>atan2(dy, dx)</strong>: returns the angle for that offset in a quadrant-safe way.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Common mistake</p>
+            <h2 class="section-heading__title">Degrees and radians are not interchangeable</h2>
+            <p class="section-heading__copy">Many engines expose rotation in degrees, while lower-level math functions return radians. Always check which one your engine API expects before applying the result.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Related formulas</p>
+            <h2 class="section-heading__title">Useful next steps from here</h2>
+            <ul class="detail-list detail-list--links">
+<li><a href="distance-between-two-2d-points.html">Distance between two 2D points</a></li>
+<li><a href="direction-vector-from-a-to-b.html">Direction vector from A to B</a></li>
+<li><a href="pixels-per-unit-formula.html">Pixels per unit</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>

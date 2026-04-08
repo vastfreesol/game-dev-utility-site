@@ -3,39 +3,89 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tilemap Dimension Calculator | Game Dev Utility Site</title>
+  <title>Tilemap Dimension Calculator | GameDev Utility</title>
   <meta name="description" content="Calculate tilemap pixel size from tile dimensions and grid counts for level design and export planning." />
-  <meta name="keywords" content="Tilemap Dimension Calculator, tilemap dimension calculator, game dev calculator" />
+  <meta name="keywords" content="Tilemap Dimension Calculator, tilemap dimension calculator, game dev utility" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/tilemap-dimension-calculator.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Tilemap Dimension Calculator | Game Dev Utility Site" />
+  <meta property="og:title" content="Tilemap Dimension Calculator | GameDev Utility" />
   <meta property="og:description" content="Calculate tilemap pixel size from tile dimensions and grid counts for level design and export planning." />
   <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/tilemap-dimension-calculator.html" />
-  <meta property="og:site_name" content="Game Dev Utility Site" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tilemap Dimension Calculator | Game Dev Utility Site" />
+  <meta name="twitter:title" content="Tilemap Dimension Calculator | GameDev Utility" />
   <meta name="twitter:description" content="Calculate tilemap pixel size from tile dimensions and grid counts for level design and export planning." />
-  <link rel="stylesheet" href="assets/css/site.css" />
-  <script type="application/ld+json">[{"name":"Tilemap Dimension Calculator","keywords":"Tilemap Dimension Calculator, tilemap dimension calculator, game dev calculator","@context":"https://schema.org","description":"Calculate tilemap pixel size from tile dimensions and grid counts for level design and export planning.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/tilemap-dimension-calculator.html"},{"@context":"https://schema.org","mainEntity":[{"acceptedAnswer":{"text":"This is useful for planning camera coverage, export sizes, collision data expectations, and streaming boundaries.","@type":"Answer"},"name":"What does this calculator help with?","@type":"Question"},{"acceptedAnswer":{"text":"Game developers, technical artists, and hobbyists who want a fast answer without opening a spreadsheet or digging through engine docs.","@type":"Answer"},"name":"Who is this tool for?","@type":"Question"}],"@type":"FAQPage"}]</script>
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">[{"name":"Tilemap Dimension Calculator","keywords":"Tilemap Dimension Calculator, tilemap dimension calculator, game dev utility","@context":"https://schema.org","description":"Calculate tilemap pixel size from tile dimensions and grid counts for level design and export planning.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/tilemap-dimension-calculator.html"},{"@context":"https://schema.org","mainEntity":[{"acceptedAnswer":{"text":"This is useful for planning camera coverage, export sizes, collision data expectations, and streaming boundaries.","@type":"Answer"},"name":"What does this utility help with?","@type":"Question"},{"acceptedAnswer":{"text":"Game developers, technical artists, and hobbyists who want a fast answer without opening a spreadsheet or digging through engine docs.","@type":"Answer"},"name":"Who is this tool for?","@type":"Question"}],"@type":"FAQPage"}]</script>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="topbar__brand" href="index.html">
-        <span class="topbar__badge"></span>
-        <span>Game Dev Utility Site</span>
-      </a>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
     </header>
-    <section class="hero hero--compact">
-      <p class="hero__eyebrow">Level layout</p>
-      <h1 class="hero__title">Tilemap Dimension Calculator</h1>
-      <p class="hero__copy">Convert tile counts into final map dimensions so you can plan exports, camera framing, and memory budgets.</p>
-    </section>
-    <section class="section split">
-      <form id="calculator-form" class="panel calculator">
-        <p class="prose">Use this calculator when you know the tile size and the number of columns and rows in your level grid.</p>
-        <div class="field-grid">
+    <main class="page-main">
+      <div class="detail-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">Level layout</p>
+          <h1 class="hero__title hero__title--page">Tilemap Dimension Calculator</h1>
+          <p class="hero__copy">Convert tile counts into final map dimensions so you can plan exports, camera framing, and memory budgets.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="content-grid">
+          <form id="calculator-form" class="surface calculator">
+            <p class="section-heading__copy">Use this calculator when you know the tile size and the number of columns and rows in your level grid.</p>
+            <div class="field-grid">
 <div class="field">
   <label for="tileWidth">Tile Width (pixels)</label>
   <input id="tileWidth" name="tileWidth" type="number" step="1" min="1" value="32" />
@@ -52,73 +102,92 @@
   <label for="rows">Rows</label>
   <input id="rows" name="rows" type="number" step="1" min="1" value="40" />
 </div>
+            </div>
+            <div class="button-row">
+              <button class="button button--primary" type="submit">Calculate</button>
+              <button class="button button--secondary" type="reset">Reset</button>
+            </div>
+            <div class="result" data-result>
+              <span class="result__label" data-result-label>Tilemap dimensions</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </form>
+          <aside class="surface surface--soft">
+            <p class="eyebrow">Why it helps</p>
+            <h2 class="section-heading__title">Workflow context</h2>
+            <p class="section-heading__copy">Use this calculator when you know the tile size and the number of columns and rows in your level grid.</p>
+            <p class="section-heading__copy">This is useful for planning camera coverage, export sizes, collision data expectations, and streaming boundaries.</p>
+          </aside>
         </div>
-        <div class="button-row">
-          <button class="button" type="submit">Calculate</button>
-          <button class="button button--secondary" type="reset">Reset</button>
-        </div>
-        <div class="result" data-result>
-          <span class="result__label" data-result-label>Tilemap dimensions</span>
-          <span class="result__value" data-result-value>Loading...</span>
-          <p class="result__explanation" data-result-explanation></p>
-        </div>
-      </form>
-      <aside class="panel panel--padded">
-        <h2 class="section-title">Why this page matters</h2>
-        <p class="prose">Primary search intent: <strong>tilemap dimension calculator</strong>.</p>
-        <p class="prose">Use this calculator when you know the tile size and the number of columns and rows in your level grid.</p>
-        <p class="prose">This is useful for planning camera coverage, export sizes, collision data expectations, and streaming boundaries.</p>
-      </aside>
-    </section>
-    <section class="section split">
-      <article class="panel panel--padded">
-        <p class="kicker">How to use it</p>
-        <h2 class="section-title">Practical use</h2>
-        <p class="prose">Enter your values, run the calculator, and use the result as a quick reference while importing assets, profiling performance, or planning level content. This is meant to speed up production decisions, not replace deeper engine-specific tuning.</p>
-        <p class="prose">Because the page is focused on one job, it is easier to revisit later, share with teammates, or include in internal workflow docs.</p>
-      </article>
-      <article class="panel panel--padded">
-        <p class="kicker">Related tools</p>
-        <h2 class="section-title">Related calculators</h2>
-        <ul class="list">
+      </section>
+      <section class="section">
+        <div class="content-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">How to use it</p>
+            <h2 class="section-heading__title">Practical use</h2>
+            <p class="section-heading__copy">Enter your values, run the utility, and use the result as a quick reference while importing assets, profiling performance, or planning level content. This is meant to speed up production decisions, not replace deeper engine-specific tuning.</p>
+            <p class="section-heading__copy">Because the page is focused on one job, it is easier to revisit later, share with teammates, or include in internal workflow docs.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Related tools</p>
+            <h2 class="section-heading__title">Keep moving</h2>
+            <ul class="detail-list detail-list--links">
 <li><a href="pixels-per-unit-calculator.html">Pixels Per Unit Calculator</a></li>
 <li><a href="frame-time-calculator.html">Frame Time Calculator</a></li>
 <li><a href="sprite-sheet-frame-count-calculator.html">Sprite Sheet Frame Count Calculator</a></li>
-        </ul>
-      </article>
-    </section>
-    <section class="section split">
-      <article class="panel panel--padded">
-        <p class="kicker">Why developers search for this</p>
-        <h2 class="section-title">Quick context</h2>
-        <p class="prose">Many game-development tasks involve repeated small calculations that interrupt flow. A focused calculator page helps answer the question quickly and keeps the result tied to the workflow where it matters.</p>
-        <p class="prose">That is the value of this page: a narrow search intent, a direct calculation, and enough explanation to make the number useful.</p>
-      </article>
-      <article class="panel panel--padded">
-        <p class="kicker">FAQ</p>
-        <h2 class="section-title">Common questions</h2>
-        <div class="faq-list">
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Quick context</p>
+            <h2 class="section-heading__title">Why developers search for this</h2>
+            <p class="section-heading__copy">Many game-development tasks involve repeated small calculations that interrupt flow. A focused utility page helps answer the question quickly and keeps the result tied to the workflow where it matters.</p>
+            <p class="section-heading__copy">That is the value of this page: a narrow search intent, a direct result, and enough explanation to make the number useful.</p>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section-heading__title">Common questions</h2>
+            <div class="faq-list">
 <article class="faq-item">
-  <h3>What does this calculator help with?</h3>
+  <h3>What does this utility help with?</h3>
   <p>This is useful for planning camera coverage, export sizes, collision data expectations, and streaming boundaries.</p>
 </article>
 <article class="faq-item">
   <h3>Who is this tool for?</h3>
   <p>Game developers, technical artists, and hobbyists who want a fast answer without opening a spreadsheet or digging through engine docs.</p>
 </article>
+            </div>
+          </article>
         </div>
-      </article>
-    </section>
-    <script src="assets/js/site.js"></script>
-    <script src="assets/js/tilemap-dimension.js"></script>
-    <footer class="footer">
-      <p>Built as a static site for lightweight deployment on GitHub Pages, Cloudflare Pages, or Netlify.</p>
-      <div class="footer__links">
-        <a href="index.html">Home</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <a href="robots.txt">Robots</a>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
       </div>
     </footer>
   </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/tilemap-dimension.js?v=1775609095"></script>
 </body>
 </html>

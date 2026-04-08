@@ -3,114 +3,177 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Game Dev Utility Site | Game Development Calculators and Workflow Tools</title>
-  <meta name="description" content="Game development calculators for pixels per unit, frame time, sprite sheets, atlas memory, and tilemap dimensions." />
-  <meta name="keywords" content="game development calculators, game dev tools, pixels per unit calculator, frame time calculator, tilemap calculator" />
+  <title>GameDev Utility | Essential tools for game developers</title>
+  <meta name="description" content="A focused toolkit of fast, clean utilities for practical game development workflows." />
+  <meta name="keywords" content="game dev tools, game development utilities, indie game tools, workflow utilities" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Game Dev Utility Site | Game Development Calculators and Workflow Tools" />
-  <meta property="og:description" content="Game development calculators for pixels per unit, frame time, sprite sheets, atlas memory, and tilemap dimensions." />
+  <meta property="og:title" content="GameDev Utility | Essential tools for game developers" />
+  <meta property="og:description" content="A focused toolkit of fast, clean utilities for practical game development workflows." />
   <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/" />
-  <meta property="og:site_name" content="Game Dev Utility Site" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Game Dev Utility Site | Game Development Calculators and Workflow Tools" />
-  <meta name="twitter:description" content="Game development calculators for pixels per unit, frame time, sprite sheets, atlas memory, and tilemap dimensions." />
-  <link rel="stylesheet" href="assets/css/site.css" />
-  <script type="application/ld+json">[{"@context":"https://schema.org","url":"https://hamisht92.github.io/game-dev-utility-site/","name":"Game Dev Utility Site","description":"Small calculators for common game-development workflow and performance tasks.","@type":"WebSite"},{"@context":"https://schema.org","itemListElement":[{"position":1,"url":"https://hamisht92.github.io/game-dev-utility-site/pixels-per-unit-calculator.html","name":"Pixels Per Unit Calculator","@type":"ListItem"},{"position":2,"url":"https://hamisht92.github.io/game-dev-utility-site/frame-time-calculator.html","name":"Frame Time Calculator","@type":"ListItem"},{"position":3,"url":"https://hamisht92.github.io/game-dev-utility-site/sprite-sheet-frame-count-calculator.html","name":"Sprite Sheet Frame Count Calculator","@type":"ListItem"},{"position":4,"url":"https://hamisht92.github.io/game-dev-utility-site/atlas-texture-memory-estimator.html","name":"Atlas Texture Memory Estimator","@type":"ListItem"},{"position":5,"url":"https://hamisht92.github.io/game-dev-utility-site/tilemap-dimension-calculator.html","name":"Tilemap Dimension Calculator","@type":"ListItem"}],"@type":"ItemList"}]</script>
+  <meta name="twitter:title" content="GameDev Utility | Essential tools for game developers" />
+  <meta name="twitter:description" content="A focused toolkit of fast, clean utilities for practical game development workflows." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">[{"@context":"https://schema.org","url":"https://hamisht92.github.io/game-dev-utility-site/","name":"GameDev Utility","description":"Practical tools and utilities for common game-development workflows.","@type":"WebSite"},{"@context":"https://schema.org","itemListElement":[{"position":1,"url":"https://hamisht92.github.io/game-dev-utility-site/pixels-per-unit-calculator.html","name":"Pixels Per Unit Calculator","@type":"ListItem"},{"position":2,"url":"https://hamisht92.github.io/game-dev-utility-site/frame-time-calculator.html","name":"Frame Time Calculator","@type":"ListItem"},{"position":3,"url":"https://hamisht92.github.io/game-dev-utility-site/sprite-sheet-frame-count-calculator.html","name":"Sprite Sheet Frame Count Calculator","@type":"ListItem"}],"@type":"ItemList"}]</script>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="topbar__brand" href="index.html">
-        <span class="topbar__badge"></span>
-        <span>Game Dev Utility Site</span>
-      </a>
-    </header>
-    <section class="hero">
-      <div class="hero__grid">
-        <div>
-          <p class="hero__eyebrow">Game development calculators</p>
-          <h1 class="hero__title">Small calculators for real game dev workflows.</h1>
-          <p class="hero__copy">Find focused tools for sprite scaling, frame budgets, sprite sheet planning, atlas memory estimates, and tilemap sizing. Each page is built around a practical game-development task and designed to answer a specific search query quickly.</p>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link site-nav__link--active" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
         </div>
-        <aside class="panel panel--padded">
-          <div class="stats">
-            <div class="stat">
-              <span class="stat__value">5</span>
-              <span class="stat__label">Launch utility pages</span>
-            </div>
-            <div class="stat">
-              <span class="stat__value">Static</span>
-              <span class="stat__label">Fast pages with no backend overhead</span>
-            </div>
-            <div class="stat">
-              <span class="stat__value">Searchable</span>
-              <span class="stat__label">Sitemap, robots, canonical URLs, and structured data included</span>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="hero hero--home">
+        <div class="hero__layout">
+          <div class="hero__content">
+            <p class="eyebrow">Game development tools</p>
+            <h1 class="hero__title">Essential tools for game developers</h1>
+            <p class="hero__copy">For developers, designers, and technical artists who need quick answers for common game development tasks without clutter, distractions, or unnecessary complexity.</p>
+            <div class="button-row button-row--hero">
+              <a class="button button--primary" href="utilities.html">Explore Utilities</a>
+              <a class="button button--secondary" href="about.html">About</a>
             </div>
           </div>
-        </aside>
-      </div>
-    </section>
-    <section class="section">
-      <h2 class="section-title">Calculator pages</h2>
-      <div class="grid grid--cards">
-<a class="card-link" href="pixels-per-unit-calculator.html">
-  <article class="panel card">
-    <p class="card__eyebrow">2d-workflow</p>
-    <h2 class="card__title">Pixels Per Unit Calculator</h2>
-    <p class="prose">Calculate the pixels-per-unit value for 2D sprites, tiles, and characters.</p>
-  </article>
-</a>
-<a class="card-link" href="frame-time-calculator.html">
-  <article class="panel card">
-    <p class="card__eyebrow">performance</p>
-    <h2 class="card__title">Frame Time Calculator</h2>
-    <p class="prose">Convert target FPS into milliseconds per frame for gameplay, animation, and performance budgeting.</p>
-  </article>
-</a>
-<a class="card-link" href="sprite-sheet-frame-count-calculator.html">
-  <article class="panel card">
-    <p class="card__eyebrow">2d-workflow</p>
-    <h2 class="card__title">Sprite Sheet Frame Count Calculator</h2>
-    <p class="prose">Calculate how many animation frames fit in a sprite sheet based on sheet size and frame size.</p>
-  </article>
-</a>
-<a class="card-link" href="atlas-texture-memory-estimator.html">
-  <article class="panel card">
-    <p class="card__eyebrow">performance</p>
-    <h2 class="card__title">Atlas Texture Memory Estimator</h2>
-    <p class="prose">Estimate the approximate memory footprint of a texture atlas from width, height, and bytes per pixel.</p>
-  </article>
-</a>
-<a class="card-link" href="tilemap-dimension-calculator.html">
-  <article class="panel card">
-    <p class="card__eyebrow">level-design</p>
-    <h2 class="card__title">Tilemap Dimension Calculator</h2>
-    <p class="prose">Calculate tilemap pixel size from tile dimensions and grid counts for level design and export planning.</p>
-  </article>
-</a>
-      </div>
-    </section>
-    <section class="section">
-      <article class="panel panel--padded">
-        <h2 class="section-title">What this site covers</h2>
-        <p class="prose">These calculators are aimed at developers who search for quick answers during production rather than long tutorials. That makes the site a better fit for long-tail queries where a focused tool plus a short explanation can solve the job immediately.</p>
-        <ul class="formula-list">
-          <li>2D workflow tools for sprite scaling and animation planning</li>
-          <li>Performance tools for frame budgets and texture memory</li>
-          <li>Level-design tools for map sizing and export planning</li>
-        </ul>
-      </article>
-    </section>
-    <footer class="footer">
-      <p>Built as a static site for lightweight deployment on GitHub Pages, Cloudflare Pages, or Netlify.</p>
-      <div class="footer__links">
-        <a href="index.html">Home</a>
-        <a href="sitemap.xml">Sitemap</a>
-        <a href="robots.txt">Robots</a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Why developers use it</p>
+          <h2 class="section-heading__title">Built for quick answers and focused workflows</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="surface feature-card">
+            <h3>Fast access</h3>
+            <p>Open tools instantly and get what you need quickly without digging through docs or spreadsheets.</p>
+          </article>
+          <article class="surface feature-card">
+            <h3>Focused utilities</h3>
+            <p>Purpose-built utilities and helpers for practical game-dev tasks across art, performance, and production.</p>
+          </article>
+          <article class="surface feature-card">
+            <h3>Clear outputs</h3>
+            <p>Readable results, straightforward inputs, and just enough context to help you make the next production decision.</p>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Featured tools</p>
+            <h2 class="section-heading__title">A quick preview of the tools</h2>
+          </div>
+          <a class="button button--ghost" href="utilities.html">View all utilities</a>
+        </div>
+        <div class="tool-grid">
+<article class="tool-card tool-card--compact">
+  <div class="tool-card__top">
+    <span class="tool-card__icon" aria-hidden="true">PX</span>
+    <span class="tool-card__tag">2D Workflow</span>
+  </div>
+  <h3 class="tool-card__title">Pixels Per Unit Calculator</h3>
+  <p class="tool-card__copy">Calculate the pixels-per-unit value for 2D sprites, tiles, and characters.</p>
+  <a class="button button--ghost" href="pixels-per-unit-calculator.html">Open</a>
+</article>
+<article class="tool-card tool-card--compact">
+  <div class="tool-card__top">
+    <span class="tool-card__icon" aria-hidden="true">MS</span>
+    <span class="tool-card__tag">Performance</span>
+  </div>
+  <h3 class="tool-card__title">Frame Time Calculator</h3>
+  <p class="tool-card__copy">Convert target FPS into milliseconds per frame for gameplay, animation, and performance budgeting.</p>
+  <a class="button button--ghost" href="frame-time-calculator.html">Open</a>
+</article>
+<article class="tool-card tool-card--compact">
+  <div class="tool-card__top">
+    <span class="tool-card__icon" aria-hidden="true">PX</span>
+    <span class="tool-card__tag">2D Workflow</span>
+  </div>
+  <h3 class="tool-card__title">Sprite Sheet Frame Count Calculator</h3>
+  <p class="tool-card__copy">Calculate how many animation frames fit in a sprite sheet based on sheet size and frame size.</p>
+  <a class="button button--ghost" href="sprite-sheet-frame-count-calculator.html">Open</a>
+</article>
+        </div>
+      </section>
+      <section class="section">
+        <article class="philosophy-strip">
+          <p class="eyebrow">About the brand</p>
+          <h2 class="section-heading__title">GameDev Utility is a practical toolkit for developers who want quick answers and clean workflows.</h2>
+          <p class="section-heading__copy">The goal is to make common calculations and technical reference tasks simple, fast, and accessible so you can stay in the flow of making games.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
       </div>
     </footer>
   </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+
 </body>
 </html>

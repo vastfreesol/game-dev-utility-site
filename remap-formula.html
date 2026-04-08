@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remap Formula | GameDev Utility</title>
+  <meta name="description" content="Translate a value from one range into a different range." />
+  <meta name="keywords" content="Remap Formula, game dev formula, utilities, game development math" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/remap-formula.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Remap Formula | GameDev Utility" />
+  <meta property="og:description" content="Translate a value from one range into a different range." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/remap-formula.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Remap Formula | GameDev Utility" />
+  <meta name="twitter:description" content="Translate a value from one range into a different range." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"name":"Remap Formula","keywords":"Remap Formula, game dev formula, utilities, game development math","@context":"https://schema.org","description":"Translate a value from one range into a different range.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/remap-formula.html"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">Core utility formula</p>
+          <h1 class="hero__title hero__title--page">Remap one range into another</h1>
+          <p class="hero__copy">Use remap when one gameplay value needs to drive another scale, like health to UI fill or speed to effect intensity.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft formula-intro-card">
+            <p class="eyebrow">At a glance</p>
+            <div class="formula-card__expression">OutMin + ((Value - InMin) / (InMax - InMin)) * (OutMax - OutMin)</div>
+            <p class="section-heading__copy">Remap helps you take a value that makes sense in one range and convert it into another range without losing the relative position.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="utilities.html">Back to Utilities</a>
+            </div>
+          </article>
+          <article class="surface formula-lab formula-lab--page" data-formula-card="remap">
+            <p class="eyebrow">Try it</p>
+            <h2 class="section-heading__title">Change the values and see what the formula does</h2>
+            <p class="section-heading__copy">Every field is editable so you can test the idea with your own numbers before you implement it in code.</p>
+            <div class="field-grid field-grid--tight">
+<div class="field">
+  <label for="formula-remap-value">Value</label>
+  <input id="formula-remap-value" name="formula-remap-value" type="number" step="0.01" value="75" data-formula-input="value" />
+</div>
+<div class="field">
+  <label for="formula-remap-in-min">In Min</label>
+  <input id="formula-remap-in-min" name="formula-remap-in-min" type="number" step="0.01" value="0" data-formula-input="in-min" />
+</div>
+<div class="field">
+  <label for="formula-remap-in-max">In Max</label>
+  <input id="formula-remap-in-max" name="formula-remap-in-max" type="number" step="0.01" value="100" data-formula-input="in-max" />
+</div>
+<div class="field">
+  <label for="formula-remap-out-min">Out Min</label>
+  <input id="formula-remap-out-min" name="formula-remap-out-min" type="number" step="0.01" value="0" data-formula-input="out-min" />
+</div>
+<div class="field">
+  <label for="formula-remap-out-max">Out Max</label>
+  <input id="formula-remap-out-max" name="formula-remap-out-max" type="number" step="0.01" value="1" data-formula-input="out-max" />
+</div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">Remap result</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Simple explanation</p>
+            <h2 class="section-heading__title">What the formula means</h2>
+            <p class="section-heading__copy">Remap finds where the input sits inside its source range, then puts it at the same relative point inside the target range.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Code example</p>
+              <pre class="formula-code__block"><code>float result = outMin + ((value - inMin) / (inMax - inMin)) * (outMax - outMin);</code></pre>
+            </div>
+
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">When to use it</p>
+            <h2 class="section-heading__title">Common game-dev uses</h2>
+            <ul class="detail-list">
+<li>Convert health from 0 to 250 into a UI fill from 0 to 1.</li>
+<li>Turn trigger input from 0 to 1 into movement speed from walk to sprint.</li>
+<li>Map progress, XP, or charge values into a custom visual scale.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Variables</p>
+            <h2 class="section-heading__title">What each variable represents</h2>
+            <ul class="detail-list formula-meta__list">
+<li><strong>Value</strong>: The number you want to convert.</li>
+<li><strong>InMin</strong>: The low end of the source range.</li>
+<li><strong>InMax</strong>: The high end of the source range.</li>
+<li><strong>OutMin</strong>: The low end of the output range.</li>
+<li><strong>OutMax</strong>: The high end of the output range.</li>
+            </ul>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Constants</p>
+            <h2 class="section-heading__title">Fixed values in the formula</h2>
+            <ul class="detail-list formula-meta__list">
+<li>No fixed constants. The behavior comes from the values you provide.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>

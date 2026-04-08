@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lerp Formula | GameDev Utility</title>
+  <meta name="description" content="Move smoothly between two values using a percentage." />
+  <meta name="keywords" content="Lerp Formula, game dev formula, utilities, game development math" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://hamisht92.github.io/game-dev-utility-site/lerp-formula.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Lerp Formula | GameDev Utility" />
+  <meta property="og:description" content="Move smoothly between two values using a percentage." />
+  <meta property="og:url" content="https://hamisht92.github.io/game-dev-utility-site/lerp-formula.html" />
+  <meta property="og:site_name" content="GameDev Utility" />
+  <meta property="og:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta property="og:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lerp Formula | GameDev Utility" />
+  <meta name="twitter:description" content="Move smoothly between two values using a percentage." />
+  <meta name="twitter:image" content="https://hamisht92.github.io/game-dev-utility-site/assets/social/game-dev-utility-card.png" />
+  <meta name="twitter:image:alt" content="GameDev Utility social preview card showing practical tools for game developers." />
+  <link rel="icon" type="image/png" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <link rel="apple-touch-icon" href="assets/branding/vfs-logo.png?v=1775609095" />
+  <meta property="og:logo" content="https://hamisht92.github.io/game-dev-utility-site/assets/branding/vfs-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1775609095" />
+  <script type="application/ld+json">{"name":"Lerp Formula","keywords":"Lerp Formula, game dev formula, utilities, game development math","@context":"https://schema.org","description":"Move smoothly between two values using a percentage.","@type":"WebPage","url":"https://hamisht92.github.io/game-dev-utility-site/lerp-formula.html"}</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="GameDev Utility home">
+          <span class="site-brand__mark" aria-hidden="true"></span>
+          <span class="site-brand__text">
+            <span class="site-brand__title">GameDev Utility</span>
+            <span class="site-brand__subtitle">Practical tools for game developers</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="site-header__nav" id="site-nav" data-nav-panel>
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__link" href="index.html">Home</a>
+            <div class="site-nav__item" data-tools-menu>
+              <button class="site-nav__trigger site-nav__trigger--active" type="button" aria-expanded="false" aria-haspopup="true" data-tools-toggle>
+                <span>Tools</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-tools-panel>
+                <a class="site-nav__sublink site-nav__sublink--active" href="utilities.html">Utilities</a>
+                <a class="site-nav__sublink" href="engine-assistant.html">Engine Assistant</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="about.html">About</a>
+            <div class="site-nav__item" data-support-menu>
+              <button class="site-nav__trigger" type="button" aria-expanded="false" aria-haspopup="true" data-support-toggle>
+                <span>Support</span>
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="site-nav__submenu" data-support-panel>
+                <a class="site-nav__sublink" href="donate.html">Donate</a>
+                <a class="site-nav__sublink" href="supporters.html">Supporters</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="detail-shell formula-shell">
+      <section class="hero hero--page">
+        <div class="hero__content">
+          <p class="eyebrow">Core utility formula</p>
+          <h1 class="hero__title hero__title--page">Lerp between two values</h1>
+          <p class="hero__copy">Use lerp when a value needs to move part of the way from a start point to an end point.</p>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft formula-intro-card">
+            <p class="eyebrow">At a glance</p>
+            <div class="formula-card__expression">Lerp(A, B, T) = A + (B - A) * T</div>
+            <p class="section-heading__copy">Lerp is a small formula that shows up everywhere in games, from UI bars and camera movement to audio fades and animation blending.</p>
+            <div class="button-row">
+              <a class="button button--ghost" href="utilities.html">Back to Utilities</a>
+            </div>
+          </article>
+          <article class="surface formula-lab formula-lab--page" data-formula-card="lerp">
+            <p class="eyebrow">Try it</p>
+            <h2 class="section-heading__title">Change the values and see what the formula does</h2>
+            <p class="section-heading__copy">Every field is editable so you can test the idea with your own numbers before you implement it in code.</p>
+            <div class="field-grid field-grid--tight">
+<div class="field">
+  <label for="formula-lerp-a">A</label>
+  <input id="formula-lerp-a" name="formula-lerp-a" type="number" step="0.01" value="0" data-formula-input="a" />
+</div>
+<div class="field">
+  <label for="formula-lerp-b">B</label>
+  <input id="formula-lerp-b" name="formula-lerp-b" type="number" step="0.01" value="100" data-formula-input="b" />
+</div>
+<div class="field">
+  <label for="formula-lerp-t">T</label>
+  <input id="formula-lerp-t" name="formula-lerp-t" type="number" step="0.01" value="0.25" data-formula-input="t" />
+</div>
+            </div>
+            <div class="result formula-result" data-formula-result>
+              <span class="result__label">Lerp result</span>
+              <span class="result__value" data-result-value>Loading...</span>
+              <p class="result__explanation" data-result-explanation></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Simple explanation</p>
+            <h2 class="section-heading__title">What the formula means</h2>
+            <p class="section-heading__copy">Lerp starts at A, looks at B, then moves some percentage of the distance between them based on T.</p>
+            <div class="formula-code">
+              <p class="formula-code__label">Code example</p>
+              <pre class="formula-code__block"><code>float result = a + (b - a) * t;</code></pre>
+            </div>
+
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">When to use it</p>
+            <h2 class="section-heading__title">Common game-dev uses</h2>
+            <ul class="detail-list">
+<li>Blend a UI fill amount toward a target value.</li>
+<li>Move a camera or object smoothly from one position to another.</li>
+<li>Fade volume, light intensity, or post-process values over time.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="section section--compact">
+        <div class="formula-page-grid">
+          <article class="surface surface--soft">
+            <p class="eyebrow">Variables</p>
+            <h2 class="section-heading__title">What each variable represents</h2>
+            <ul class="detail-list formula-meta__list">
+<li><strong>A</strong>: The starting value.</li>
+<li><strong>B</strong>: The ending value.</li>
+<li><strong>T</strong>: How far to move from A to B. 0 means stay at A, 1 means go all the way to B.</li>
+            </ul>
+          </article>
+          <article class="surface surface--soft">
+            <p class="eyebrow">Constants</p>
+            <h2 class="section-heading__title">Fixed values in the formula</h2>
+            <ul class="detail-list formula-meta__list">
+<li>No fixed constants. The behavior comes from the values you provide.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="site-footer__brand">GameDev Utility</p>
+          <p class="site-footer__copy">Focused utilities and helpers for practical game development workflows.</p>
+        </div>
+        <div class="site-footer__meta">
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="utilities.html">Utilities</a>
+            <a href="engine-assistant.html">Engine Assistant</a>
+            <a href="about.html">About</a>
+            <a href="donate.html">Donate</a>
+            <a href="supporters.html">Supporters</a>
+            <a href="feedback.html">Feedback</a>
+          </nav>
+          <p class="site-footer__legal">&copy; 2026 GameDev Utility. Built for clean workflows and quick answers.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/site.js?v=1775609095"></script>
+  <script src="assets/js/formula-reference.js?v=1775609095"></script>
+</body>
+</html>
