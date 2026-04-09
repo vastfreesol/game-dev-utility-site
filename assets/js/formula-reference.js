@@ -1,10 +1,14 @@
 function readFormulaNumber(cardNode, key) {
-  const input = cardNode.querySelector(`[data-formula-input="${key}"]`);
+  const input =
+    cardNode.querySelector(`[data-formula-input="${key}"]`) ||
+    document.querySelector(`[data-formula-input="${key}"]`);
   return input ? Number.parseFloat(input.value) : Number.NaN;
 }
 
 function updateFormulaResult(cardNode, label, value, explanation) {
-  const resultNode = cardNode.querySelector("[data-formula-result]");
+  const resultNode =
+    cardNode.querySelector("[data-formula-result]") ||
+    document.querySelector("[data-formula-result]");
   if (!resultNode) {
     return;
   }
@@ -117,12 +121,18 @@ function setupRemapCard(cardNode) {
 }
 
 function setupPointPlotCard(cardNode, options) {
-  const pointA = cardNode.querySelector("[data-point-a]");
-  const pointB = cardNode.querySelector("[data-point-b]");
-  const mainLine = cardNode.querySelector("[data-plot-line]");
-  const dxLine = cardNode.querySelector("[data-plot-dx]");
-  const dyLine = cardNode.querySelector("[data-plot-dy]");
-  const plotSvg = cardNode.querySelector(".formula-plot__svg");
+  const resolveNode = (selector) => cardNode.querySelector(selector) || document.querySelector(selector);
+  const resolveNodes = (selector) => {
+    const localMatches = Array.from(cardNode.querySelectorAll(selector));
+    return localMatches.length ? localMatches : Array.from(document.querySelectorAll(selector));
+  };
+
+  const pointA = resolveNode("[data-point-a]");
+  const pointB = resolveNode("[data-point-b]");
+  const mainLine = resolveNode("[data-plot-line]");
+  const dxLine = resolveNode("[data-plot-dx]");
+  const dyLine = resolveNode("[data-plot-dy]");
+  const plotSvg = resolveNode(".formula-plot__svg");
 
   if (!plotSvg || !pointA || !pointB) {
     return;
@@ -142,7 +152,7 @@ function setupPointPlotCard(cardNode, options) {
   let dragHandle = null;
 
   const setInputValue = (key, value) => {
-    const input = cardNode.querySelector(`[data-formula-input="${key}"]`);
+    const input = resolveNode(`[data-formula-input="${key}"]`);
     if (input) {
       input.value = String(Math.round(value * 10) / 10);
     }
@@ -246,7 +256,7 @@ function setupPointPlotCard(cardNode, options) {
     document.body.classList.remove("is-dragging-formula-point");
   };
 
-  cardNode.querySelectorAll("[data-point-handle]").forEach((handleNode) => {
+  resolveNodes("[data-point-handle]").forEach((handleNode) => {
     handleNode.addEventListener("pointerdown", (event) => {
       dragHandle = handleNode.getAttribute("data-point-handle");
       document.body.classList.add("is-dragging-formula-point");
@@ -265,7 +275,7 @@ function setupPointPlotCard(cardNode, options) {
   plotSvg.addEventListener("pointercancel", stopDrag);
   window.addEventListener("pointerup", stopDrag);
 
-  cardNode.querySelectorAll("[data-formula-input]").forEach((input) => {
+  resolveNodes("[data-formula-input]").forEach((input) => {
     input.addEventListener("input", run);
   });
 
@@ -273,15 +283,22 @@ function setupPointPlotCard(cardNode, options) {
 }
 
 function setupDistance2dCard(cardNode) {
-  const pointA = cardNode.querySelector("[data-distance-point-a]");
-  const pointB = cardNode.querySelector("[data-distance-point-b]");
-  const distanceLine = cardNode.querySelector("[data-distance-line]");
-  const dxLine = cardNode.querySelector("[data-distance-dx]");
-  const dyLine = cardNode.querySelector("[data-distance-dy]");
-  const dxValue = cardNode.querySelector("[data-distance-dx-value]");
-  const dyValue = cardNode.querySelector("[data-distance-dy-value]");
-  const lengthValue = cardNode.querySelector("[data-distance-length-value]");
-  const plotSvg = cardNode.querySelector(".formula-plot__svg");
+  const resolveNode = (selector) => cardNode.querySelector(selector) || document.querySelector(selector);
+  const resolveNodes = (selector) => {
+    const localMatches = Array.from(cardNode.querySelectorAll(selector));
+    return localMatches.length ? localMatches : Array.from(document.querySelectorAll(selector));
+  };
+
+  const pointA = resolveNode("[data-distance-point-a]");
+  const pointB = resolveNode("[data-distance-point-b]");
+  const distanceLine = resolveNode("[data-distance-line]");
+  const dxLine = resolveNode("[data-distance-dx]");
+  const dyLine = resolveNode("[data-distance-dy]");
+  const dxValue = resolveNode("[data-distance-dx-value]");
+  const dyValue = resolveNode("[data-distance-dy-value]");
+  const lengthValue = resolveNode("[data-distance-length-value]");
+  const resultNode = resolveNode("[data-formula-result]");
+  const plotSvg = resolveNode(".formula-plot__svg");
   const plotSize = 320;
   const center = plotSize / 2;
   const maxUnits = 12;
@@ -293,14 +310,41 @@ function setupDistance2dCard(cardNode) {
   const toWorldY = (value) => (center - value) / pixelsPerUnit;
   let dragHandle = null;
 
+  const readInputValue = (key) => {
+    const input = resolveNode(`[data-formula-input="${key}"]`);
+    return input ? Number.parseFloat(input.value) : Number.NaN;
+  };
+
+  const setDistanceResult = (label, value, explanation) => {
+    if (!resultNode) {
+      return;
+    }
+
+    const labelNode = resultNode.querySelector(".result__label");
+    const valueNode = resultNode.querySelector("[data-result-value]");
+    const explanationNode = resultNode.querySelector("[data-result-explanation]");
+
+    if (labelNode) {
+      labelNode.textContent = label;
+    }
+
+    if (valueNode) {
+      valueNode.textContent = value;
+    }
+
+    if (explanationNode) {
+      explanationNode.textContent = explanation;
+    }
+  };
+
   const run = () => {
-    const x1 = readFormulaNumber(cardNode, "x1");
-    const y1 = readFormulaNumber(cardNode, "y1");
-    const x2 = readFormulaNumber(cardNode, "x2");
-    const y2 = readFormulaNumber(cardNode, "y2");
+    const x1 = readInputValue("x1");
+    const y1 = readInputValue("y1");
+    const x2 = readInputValue("x2");
+    const y2 = readInputValue("y2");
 
     if ([x1, y1, x2, y2].some((item) => Number.isNaN(item))) {
-      updateFormulaResult(cardNode, "Distance result", "Invalid input", "Enter numbers for both 2D points.");
+      setDistanceResult("Distance result", "Invalid input", "Enter numbers for both 2D points.");
       return;
     }
 
@@ -356,8 +400,7 @@ function setupDistance2dCard(cardNode) {
       lengthValue.textContent = formatNumber(distance, 3);
     }
 
-    updateFormulaResult(
-      cardNode,
+    setDistanceResult(
       "Distance result",
       formatNumber(distance, 3),
       `Point A (${formatNumber(x1, 2)}, ${formatNumber(y1, 2)}) to Point B (${formatNumber(x2, 2)}, ${formatNumber(y2, 2)}) gives dx ${formatNumber(dx, 2)}, dy ${formatNumber(dy, 2)}, and a straight-line distance of ${formatNumber(distance, 3)}.`
@@ -365,7 +408,7 @@ function setupDistance2dCard(cardNode) {
   };
 
   const setInputValue = (key, value) => {
-    const input = cardNode.querySelector(`[data-formula-input="${key}"]`);
+    const input = resolveNode(`[data-formula-input="${key}"]`);
     if (!input) {
       return;
     }
@@ -402,7 +445,7 @@ function setupDistance2dCard(cardNode) {
     document.body.classList.remove("is-dragging-formula-point");
   };
 
-  cardNode.querySelectorAll("[data-distance-handle]").forEach((handleNode) => {
+  resolveNodes("[data-distance-handle]").forEach((handleNode) => {
     handleNode.addEventListener("pointerdown", (event) => {
       dragHandle = handleNode.getAttribute("data-distance-handle");
       document.body.classList.add("is-dragging-formula-point");
@@ -427,7 +470,7 @@ function setupDistance2dCard(cardNode) {
 
   window.addEventListener("pointerup", stopDrag);
 
-  cardNode.querySelectorAll("[data-formula-input]").forEach((input) => {
+  resolveNodes("[data-formula-input]").forEach((input) => {
     input.addEventListener("input", run);
   });
 
